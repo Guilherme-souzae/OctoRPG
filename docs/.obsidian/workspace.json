@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "743ff7d12c6440e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "90ca4c4025000165",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0fe59d69457505e5",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Decisões de alto nível.canvas",
+                "viewState": {
+                  "x": 527.4816258364375,
+                  "y": 543.141057647439,
+                  "zoom": -0.6666666666666665
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Decisões de alto nível"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6337a3ef3633ec2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "d408e23dac012446",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dfe377f955bd4615",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "e455c877debe4461",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "bf1be1d8f5c73a65",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8337d0b1e5ad73b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e7df2052b0dd017",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9a6007128429793",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "00f62e672f6fd88f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "435da727cea2f412",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "79b05dc475cae9f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sem título.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Sem título"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "0fe59d69457505e5",
+  "lastOpenFiles": [
+    "Decisões de baixo nível.canvas",
+    "Decisões de alto nível.canvas",
+    "Estrutura.canvas",
+    "Untitled Diagram.svg",
+    "Sem título.base",
+    "RPG.drawio",
+    "Bem-vindo.md",
+    "desktop.ini"
+  ]
+}
