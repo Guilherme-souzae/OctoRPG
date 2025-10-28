@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://btpvxca8eyqbo"]
+
+[ext_resource type="Texture2D" uid="uid://bijqimc864s5m" path="res://icon.svg" id="1_ewi63"]
+[ext_resource type="Script" uid="uid://dga2ktfe74831" path="res://Scripts/exploration_character.gd" id="1_y6pqq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6pqq"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_y6pqq")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_ewi63")
+
+[node name="Camera3D" type="Camera3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 0.95917094, 0.282827, 0, -0.282827, 0.95917094, 0, 0.7373656, 1.6704963)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_y6pqq")
