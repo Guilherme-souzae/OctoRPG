@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hdars7iya6sy"]
+
+[ext_resource type="Texture2D" uid="uid://bijqimc864s5m" path="res://icon.svg" id="1_dw468"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ttiy4"]
+size = Vector3(1, 1.3204346, 0.29156494)
+
+[node name="ExplorationProp" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.4750266, 0, 0, 0, 1.4750266, 0, 0, 0, 1.4750266, 0, 0.16021729, -0.019927979)
+shape = SubResource("BoxShape3D_ttiy4")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_dw468")

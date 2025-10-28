@@ -12,7 +12,7 @@ script = ExtResource("1_y6pqq")
 texture = ExtResource("1_ewi63")
 
 [node name="Camera3D" type="Camera3D" parent="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 0.95917094, 0.282827, 0, -0.282827, 0.95917094, 0, 0.7373656, 1.6704963)
+transform = Transform3D(1, 0, 0, 0, 0.95917094, 0.282827, 0, -0.282827, 0.95917094, 0, 2.1387992, 2.7888005)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_y6pqq")

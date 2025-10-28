@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dls5qvjufvy5"]
+[gd_scene load_steps=6 format=3 uid="uid://dls5qvjufvy5"]
 
 [ext_resource type="PackedScene" uid="uid://btpvxca8eyqbo" path="res://Scenes/exploration_character.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://hdars7iya6sy" path="res://Scenes/exploration_prop.tscn" id="2_go701"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_yp4wr"]
 orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a02cp"]
+albedo_color = Color(0.063171364, 0.28311273, 0.10338921, 1)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_a02cp"]
 
@@ -12,11 +16,20 @@ orientation = 1
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(11.141037, 0, 0, 0, 0.9999997, 0, 0, 0, 10.987057, 0, 0, 0)
+transform = Transform3D(51.47283, 0, 0, 0, 0.9999997, 0, 0, 0, 42.730003, 0, 0, 0)
 mesh = SubResource("QuadMesh_yp4wr")
+surface_material_override/0 = SubResource("StandardMaterial3D_a02cp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_a02cp")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_a02cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67442966, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.272423, 32.75312, 0)
+omni_range = 71.591
+omni_attenuation = -0.443
+
+[node name="ExplorationProp" parent="." instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95365036, 0.64, -3.2427142)
