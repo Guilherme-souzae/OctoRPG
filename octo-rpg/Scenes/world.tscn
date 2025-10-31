@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dls5qvjufvy5"]
+[gd_scene load_steps=8 format=3 uid="uid://dls5qvjufvy5"]
 
 [ext_resource type="PackedScene" uid="uid://btpvxca8eyqbo" path="res://Scenes/exploration_character.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://hdars7iya6sy" path="res://Scenes/exploration_prop.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://wh2goas8bfqh" path="res://Scenes/interactible_exploration_prop.tscn" id="3_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://br4v84uvfnc6c" path="res://Scenes/battle_exploration_prop.tscn" id="4_8j60k"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_yp4wr"]
 orientation = 1
@@ -33,3 +35,9 @@ omni_attenuation = -0.443
 
 [node name="ExplorationProp" parent="." instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95365036, 0.64, -3.2427142)
+
+[node name="ExplorationProp2" parent="." instance=ExtResource("3_5a7ea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1791544, 0.64, -2.5477552)
+
+[node name="ExplorationProp3" parent="." instance=ExtResource("4_8j60k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9346251, 0.64, -4.5871387)
