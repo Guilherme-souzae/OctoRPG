@@ -4,8 +4,12 @@ extends CharacterBody3D
 @export var interact_cooldown := 1.0
 
 @onready var ray = $RayCast3D
+@onready var sprite = $AnimatedSprite3D
 
 var can_interact := true
+
+func _ready() -> void:
+	sprite.play('idle_front')
 
 func _physics_process(delta):
 	var input_dir = Vector3.ZERO
