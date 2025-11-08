@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbvab05vh3p8r"]
+
+[ext_resource type="Script" uid="uid://cwk0dl33y7t5d" path="res://Scripts/terrain.gd" id="1_g24sy"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mqean"]
+
+[node name="Terrain" type="Node3D"]
+script = ExtResource("1_g24sy")
+tile_size = 20.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_mqean")
