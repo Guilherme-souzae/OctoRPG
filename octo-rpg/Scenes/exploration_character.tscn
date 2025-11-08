@@ -1,19 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://btpvxca8eyqbo"]
+[gd_scene load_steps=8 format=3 uid="uid://btpvxca8eyqbo"]
 
-[ext_resource type="Texture2D" uid="uid://bijqimc864s5m" path="res://icon.svg" id="1_ewi63"]
 [ext_resource type="Script" uid="uid://dga2ktfe74831" path="res://Scripts/exploration_character.gd" id="1_y6pqq"]
+[ext_resource type="Texture2D" uid="uid://df78fxctl445h" path="res://Assets/amogas.png" id="2_y6pqq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6pqq"]
 size = Vector3(1, 1, 0.23327637)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_57m04"]
+atlas = ExtResource("2_y6pqq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy388"]
+atlas = ExtResource("2_y6pqq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6nlm"]
+atlas = ExtResource("2_y6pqq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbxg3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57m04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gy388")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6nlm")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 15.0
+}]
+
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_y6pqq")
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("1_ewi63")
-
-[node name="Camera3D" type="Camera3D" parent="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 0.89171857, 0.45259035, 0, -0.45259035, 0.89171857, 0, 3.6991043, 5.26199)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00579834)
@@ -21,3 +44,15 @@ shape = SubResource("BoxShape3D_y6pqq")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -1.5)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+offset = Vector2(0, 4.945)
+pixel_size = 0.0475
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_nbxg3")
+animation = &"idle_front"
+frame = 2
+frame_progress = 0.42515713
+
+[node name="Camera3D" type="Camera3D" parent="AnimatedSprite3D"]
+transform = Transform3D(1, 0, 0, 0, 0.89171857, 0.45259035, 0, -0.45259035, 0.89171857, 0, 2.6441925, 3.98274)
