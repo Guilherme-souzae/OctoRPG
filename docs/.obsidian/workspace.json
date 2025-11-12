@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Decisões de alto nível.canvas",
+                "file": "Geração de planetas.canvas",
                 "viewState": {
-                  "x": 527.4816258364375,
-                  "y": 543.141057647439,
-                  "zoom": -0.6666666666666665
+                  "x": 343.1999206542969,
+                  "y": -67.20001220703125,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Decisões de alto nível"
+              "title": "Geração de planetas"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "0fe59d69457505e5",
   "lastOpenFiles": [
-    "Decisões de baixo nível.canvas",
     "Decisões de alto nível.canvas",
+    "Geração de planetas.canvas",
+    "Decisões de baixo nível.canvas",
     "Estrutura.canvas",
     "Untitled Diagram.svg",
     "Sem título.base",

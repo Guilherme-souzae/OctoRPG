@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"affcc6f8c6554732","x":-180,"y":-120,"width":250,"height":131,"type":"text","text":"Quais variáveis aleatórias serão combinadas para criar um planeta? E quais suas funções?"},
+		{"id":"6af22fbc490efb04","x":180,"y":-235,"width":250,"height":60,"type":"text","text":"Estrela"},
+		{"id":"34e621873d19ff08","x":180,"y":-145,"width":250,"height":60,"type":"text","text":"Clima"},
+		{"id":"ff0eba48c98af0a2","x":180,"y":-19,"width":250,"height":60,"type":"text","text":"Bioma"},
+		{"id":"7186e4e50d203c7f","x":180,"y":77,"width":250,"height":60,"type":"text","text":"População"}
+	],
+	"edges":[
+		{"id":"f5086d66c652499d","fromNode":"affcc6f8c6554732","fromSide":"right","toNode":"6af22fbc490efb04","toSide":"left"},
+		{"id":"8ad990d744c64a08","fromNode":"affcc6f8c6554732","fromSide":"right","toNode":"34e621873d19ff08","toSide":"left"},
+		{"id":"81a67857d294e7a3","fromNode":"affcc6f8c6554732","fromSide":"right","toNode":"ff0eba48c98af0a2","toSide":"left"},
+		{"id":"b5c6ff7d076cb283","fromNode":"affcc6f8c6554732","fromSide":"right","toNode":"7186e4e50d203c7f","toSide":"left"}
+	]
+}

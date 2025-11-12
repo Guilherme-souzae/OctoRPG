@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dls5qvjufvy5"]
 
-[ext_resource type="PackedScene" uid="uid://btpvxca8eyqbo" path="res://Scenes/exploration_character.tscn" id="1_a02cp"]
-[ext_resource type="PackedScene" uid="uid://cbvab05vh3p8r" path="res://Scenes/terrain.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://btpvxca8eyqbo" path="res://Scenes/Exploration/exploration_character.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://cbvab05vh3p8r" path="res://Scenes/Exploration/terrain.tscn" id="5_fo5ed"]
 
 [node name="World" type="Node3D"]
 
