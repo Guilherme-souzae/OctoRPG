@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://df78fxctl445h" path="res://Assets/amogas.png" id="2_y6pqq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6pqq"]
-size = Vector3(1, 1, 0.23327637)
+size = Vector3(0.86157227, 0.94091797, 0.18051147)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57m04"]
 atlas = ExtResource("2_y6pqq")
@@ -39,13 +39,14 @@ animations = [{
 script = ExtResource("1_y6pqq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00579834)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0072021484, 0.029541016, 0.005844116)
 shape = SubResource("BoxShape3D_y6pqq")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -1.5)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9716937, 0.23624468, 0, -0.23624468, 0.9716937, 0, 0, 0)
 offset = Vector2(0, 4.945)
 pixel_size = 0.0475
 texture_filter = 0
@@ -55,4 +56,4 @@ frame = 2
 frame_progress = 0.42515713
 
 [node name="Camera3D" type="Camera3D" parent="AnimatedSprite3D"]
-transform = Transform3D(1, 0, 0, 0, 0.89171857, 0.45259035, 0, -0.45259035, 0.89171857, 0, 2.6441925, 3.98274)
+transform = Transform3D(1, 0, 0, 0, 0.9880029, 0.15443447, 0, -0.15443447, 0.9880029, 0, 1.2346234, 3.1661813)

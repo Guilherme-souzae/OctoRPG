@@ -5,11 +5,11 @@ extends Node3D
 @export var tile_size: float = 1.0
 @export var noise_scale: float = 0.1
 
-# cores baseadas no valor do Perlin noise
-@export var color_water: Color = Color(0.1, 0.3, 0.8)
-@export var color_grass: Color = Color(0.1, 0.6, 0.2)
-@export var color_sand: Color = Color(0.9, 0.8, 0.4)
-@export var color_mountain: Color = Color(0.5, 0.4, 0.3)
+# tiles do terreno
+var tiles := {
+	"grass" = preload("res://Scenes/Exploration/Tiles/grass_tile.tscn"),
+	"water" = preload("res://Scenes/Exploration/Tiles/water_tile.tscn")
+}
 
 func _ready():
 	randomize()
@@ -29,33 +29,24 @@ func generate_map():
 	# gera os tiles
 	for x in range(map_size_x):
 		for z in range(map_size_z):
-			var tile = MeshInstance3D.new()
 
-			var mesh = PlaneMesh.new()
-			mesh.size = Vector2(tile_size, tile_size)
-			tile.mesh = mesh
+			# obtém valor de noise
+			var n = noise.get_noise_2d(float(x), float(z))
+			n = (n + 1.0) / 2.0
 
-			# mantém o terreno plano
+			# escolhe qual tile instanciar
+			var tile: Node3D
+			if n < 0.45:
+				tile = tiles["water"].instantiate()
+			else:
+				tile = tiles["grass"].instantiate()
+
+			# posiciona
 			tile.position = Vector3(
 				x * tile_size - offset_x + tile_size / 2.0,
-				0.01,
+				0,
 				z * tile_size - offset_z + tile_size / 2.0
 			)
 
-			# obtém valor de noise (entre -1 e 1)
-			var n = noise.get_noise_2d(float(x), float(z))
-			n = (n + 1.0) / 2.0  # normaliza para 0–1
-
-			# define cor conforme o valor do noise
-			var mat = StandardMaterial3D.new()
-			if n < 0.3:
-				mat.albedo_color = color_water
-			elif n < 0.45:
-				mat.albedo_color = color_sand
-			elif n < 0.75:
-				mat.albedo_color = color_grass
-			else:
-				mat.albedo_color = color_mountain
-
-			tile.material_override = mat
+			# adiciona
 			add_child(tile)

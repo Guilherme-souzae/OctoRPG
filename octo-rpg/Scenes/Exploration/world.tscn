@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dls5qvjufvy5"]
+[gd_scene load_steps=7 format=3 uid="uid://dls5qvjufvy5"]
 
 [ext_resource type="PackedScene" uid="uid://btpvxca8eyqbo" path="res://Scenes/Exploration/exploration_character.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://br4v84uvfnc6c" path="res://Scenes/Exploration/Props/battle_exploration_prop.tscn" id="3_v23pc"]
+[ext_resource type="PackedScene" uid="uid://hdars7iya6sy" path="res://Scenes/Exploration/Props/exploration_prop.tscn" id="4_pxrbw"]
 [ext_resource type="PackedScene" uid="uid://cbvab05vh3p8r" path="res://Scenes/Exploration/terrain.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://wh2goas8bfqh" path="res://Scenes/Exploration/Props/interactible_exploration_prop.tscn" id="5_temw1"]
+[ext_resource type="PackedScene" uid="uid://catflxaterih0" path="res://Scenes/Exploration/default_planet.tscn" id="6_pxrbw"]
 
 [node name="World" type="Node3D"]
 
@@ -11,3 +15,21 @@ map_size_z = 100
 tile_size = 1.0
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_a02cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4370964, 0)
+
+[node name="ExplorationProp" parent="." instance=ExtResource("3_v23pc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11605172, 1.7031252, -2.8253436)
+
+[node name="ExplorationProp2" parent="." instance=ExtResource("4_pxrbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.097226, 1.7031252, -2.4885082)
+
+[node name="ExplorationProp3" parent="." instance=ExtResource("5_temw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7022471, 1.7031252, -2.192319)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.21363, 22.895912)
+light_energy = 16.0
+omni_range = 61.12
+omni_attenuation = 11.02
+
+[node name="DefaultPlanet" parent="." instance=ExtResource("6_pxrbw")]
