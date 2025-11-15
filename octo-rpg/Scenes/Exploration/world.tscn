@@ -12,7 +12,6 @@
 [node name="Terrain" parent="." instance=ExtResource("5_fo5ed")]
 map_size_x = 100
 map_size_z = 100
-tile_size = 1.0
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_a02cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4370964, 0)

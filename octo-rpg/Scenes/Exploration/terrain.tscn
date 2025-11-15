@@ -6,7 +6,6 @@
 
 [node name="Terrain" type="Node3D"]
 script = ExtResource("1_jwhug")
-tile_size = 20.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

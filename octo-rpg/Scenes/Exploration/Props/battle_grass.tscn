@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://mkg6tietvmew"]
+
+[ext_resource type="Script" uid="uid://dgwjr2qv7bvvv" path="res://Scripts/battle_grass.gd" id="1_h7rlf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rabhh"]
+size = Vector3(0.75, 0.25, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rabhh"]
+albedo_color = Color(0.16692114, 0.3746219, 0.13623811, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h7rlf"]
+material = SubResource("StandardMaterial3D_rabhh")
+size = Vector3(0.75, 0.25, 0.75)
+
+[node name="BattleGrass" type="Area3D"]
+script = ExtResource("1_h7rlf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rabhh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_h7rlf")
